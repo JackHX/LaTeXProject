@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} % Times New Roman font
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem} 
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{lipsum} % For dummy text (temporary usage for the rudimentary stages of the project) 
+
+% Custom title format
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+
+% Title Page
+\title{ 
+    \vspace{2in} % Adds vertical space of 2 inches before the title text.
+    \textbf{Take-Home Eksamen DM500 Efterår 2023}\\ % Sets the main title in bold font and breaks the line after it.
+    \vspace{0.5in} % Adds additional vertical space of 0.5 inches after the main title.
+    \large University of Southern Denmark\\ % Sets the following text in a large font size for the university name and breaks the line after it.
+    \vspace{1.5in} % Finally, adds 1.5 inches of vertical space after the logo before ending the title block.
+} 
+
+\author{Jacques Klimin Buis, Sabirin Ismail Ali}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty} % Removes page number from title page
+\newpage
+
+% Table of Contents
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+% Start of Content
+\setcounter{page}{1}
+
+\section{Reeksamen februar 2015 opgave 2}
+
+\subsection{Opgave}
+\begin{enumerate}[label=\alph*)] % This will label the top-level items as a), b), etc.
+    \item Hvilke af følgende udsagn er sande?
+    \begin{enumerate}[label=\arabic*.] % This will label nested items as 1., 2., etc.
+        \item \(\forall x \in \mathbb{N}: \exists y \in \mathbb{N}: x < y\)
+        \item \(\forall x \in \mathbb{N}: \exists! y \in \mathbb{N}: x < y\)
+        \item \(\exists y \in \mathbb{N}: \forall x \in \mathbb{N}: x < y\)
+    \end{enumerate}
+    \item Angiv negeringen af udsagn 1. fra spørgsmål a). Negerings-operatoren (\(\neg\)) må ikke indgå i dit udsagn.
+\end{enumerate}
+
+\subsection{Løsning}
+\subsubsection{Løsning til a)}
+Vi analyserer de givne udsagn i forhold til deres sandhedsværdier inden for mængden af naturlige tal \(\mathbb{N}\):
+
+\vspace{0.25in}
+
+\textbf{1.} Betragt ethvert element \(x \in \mathbb{N}\). Baseret på de naturlige tals fundamentale velordnede og uendelige egenskaber, eksisterer der ubestridt altid et element \(y \in \mathbb{N}\), således at \(y = x + 1\), hvilket umiddelbart medfører, at \(x < y\). Denne konklusion bekræfter, at for hvert element i \(\mathbb{N}\), findes der et større element, og bekræfter dermed udsagnets sandhed. 
+
+\vspace{0.25in}
+
+\textbf{2.} For ethvert element \(x \in \mathbb{N}\), er der ikke blot ét unikt større element \(y \in \mathbb{N}\), men derimod en uendelig mængde af sådanne elementer. Dette strider imod udsagnets præmis, hvori det hævdes, at der eksisterer præcis ét sådant element \(y\). Derfor er udsagnet falsk.
+
+\vspace{0.25in}
+
+\textbf{3.} Udsagnet postulerer eksistensen af et element \(y \in \mathbb{N}\), som er større end alle andre elementer i \(\mathbb{N}\). Denne påstand er umiddelbart modstridende med de naturlige tals fundamentale egenskab om at være en uendelig mængde. Ingen enkelt element i \(\mathbb{N}\) kan være større end alle andre, da der altid vil være et større element. Under hensyntagen til den nævnte betingelse kan man ikke erklære udsagnet for sandt.
+
+
+\subsubsection{Løsning til b)}
+Den symbolske form for negeringen af det logiske udtryk præsenteres nedenfor:
+\[
+\exists x \in \mathbb{N} : \forall y \in \mathbb{N}, x \geq y
+\]
+Negeringen af det første udsagn, uden at bruge negerings-operatoren, kan formuleres som: "Der eksisterer et naturligt tal \(x\), så for ethvert naturligt tal \(y\), gælder det at \(x \geq y\)." Dette udsagn er \textbf{falsk}, da der for ethvert valgt naturligt tal \(x\) altid vil findes et andet naturligt tal \(y\), der er større end \(x\).
+
+
+\section{Reeksamen februar 2015 opgave 3}
+\subsection{Opgave}
+Lad \( R, S \) og \( T \) være binære relationer på mængden \( \{1,2,3,4\} \).
+
+\begin{itemize}
+  \item[a)] Lad \( R = \{(1,1), (2,1), (2,2), (2,4), (3,1), (3,3), (3,4), (4,1), (4,4)\} \). \\ Er \( R \) en partiel ordning?
+  \item[b)] Lad \( S = \{(1,2), (2,3), (2,4), (4,2)\} \). \\ Angiv den transitive lukning af \( S \).
+  \item[c)] Lad \( T = \{(1,1), (1,3), (2,2), (2,4), (3,1), (3,3), (4,2), (4,4)\} \). \\ Bemærk, at \( T \) er en ækvivalens-relation.\\ Angiv \( T \)'s ækvivalens-klasser.
+\end{itemize}
+
+\subsection{Løsning}
+\subsubsection{Løsning til a)}
+For at være en partiel ordning skal en relation \( R \) være refleksiv, antisymmetrisk og transitiv.
+\begin{itemize}
+  \item Refleksivitet: En relation er refleksiv, hvis ethvert element er relateret til sig selv. Da alle par \( (1,1), (2,2), (3,3), (4,4) \) er i \( R \), opfylder \( R \) kravet om refleksivitet.
+  \item Antisymmetri: En relation er antisymmetrisk, hvis der for alle par \( (a,b) \) og \( (b,a) \) i \( R \), følger at \( a=b \). Relationen \( R \) indeholder ikke noget par \( (a,b) \) og \( (b,a) \) hvor \( a \neq b \), hvilket betyder at \( R \) er antisymmetrisk.
+  \item Transitivitet: For at \( R \) er transitiv, skal det gælde, at hvis \( (a,b) \) og \( (b,c) \) er i \( R \), så skal \( (a,c) \) også være i \( R \). På grundlag af de givne par kan vi se, at relationen ikke indeholder et modstridende tilfælde, der ville bryde transitiviteten. Derfor er \( R \) transitiv.
+\end{itemize}
+Da \( R \) opfylder alle tre betingelser, kan vi konkludere, at \( R \) er en partiel ordning.
+
+\subsubsection{Løsning til b)}
+Den transitive lukning af en relation \( S \) er den mindste transitive relation, der indeholder \( S \). For at finde den transitive lukning, ser vi på alle par af elementer \( (a,b) \) og \( (b,c) \) i \( S \) og tilføjer \( (a,c) \) til \( S \), hvis det ikke allerede er der. For \( S \) bliver den transitive lukning \( S \cup \{(1,3), (1,4), (2, 2), (4, 3), (4, 4)\} \).
+
+\subsubsection{Løsning til c)}
+For at bestemme ækvivalensklasserne for relationen \( T \), skal vi identificere alle elementer der er relateret til hinanden. En ækvivalensklasse for et element \( a \) er mængden af alle elementer der er relateret til \( a \) inklusive \( a \) selv. For relationen \( T \) kan vi opstille følgende ækvivalensklasser:
+
+\begin{itemize}
+    \item Ækvivalensklassen for 1: [1] = \{1, 3\}
+    \item Ækvivalensklassen for 2: [2] = \{2, 4\}
+    \item Ækvivalensklassen for 3: [3] = \{1, 3\} (Bemærk at dette er den samme klasse som for 1, da 1 og 3 er relateret til hinanden)
+    \item Ækvivalensklassen for 4: [4] = \{2, 4\} (Ligesom med 3, er denne klasse identisk med klassen for 2)
+\end{itemize}
+
+Da ækvivalensklasserne er disjunkte og hver klasse repræsenterer en partionering af den oprindelige mængde, er det klart at ækvivalensklasserne for \( T \) er \{[1], [2]\}, hvilket også kan skrives som \{\{1, 3\}, \{2, 4\}\}. Disse klasser dækker hele mængden \( \{1, 2, 3, 4\} \), hvilket bekræfter at \( T \) er en ækvivalensrelation.
+
+
+\section{Matricer for Relationer R, S og T}
+Relationernes matricer repræsenterer tilstedeværelsen af par i hver relation som binære værdier i en matrix form. En '1' i en celle repræsenterer at et par (række, kolonne) er i relationen, og en '0' betyder at paret ikke er i relationen. Her er de tilsvarende matricer:
+
+\subsection{Matrix for Relation R}
+Relation \( R \) er en partiel ordning. Dens matrix repræsentation er:
+\[
+\begin{pmatrix}
+1 & 0 & 0 & 0 \\
+1 & 1 & 0 & 1 \\
+1 & 0 & 1 & 1 \\
+1 & 0 & 0 & 1 \\
+\end{pmatrix}
+\]
+Hver celle \( (i, j) \) i matrixen er '1' hvis \( (a_i, a_j) \) er i \( R \), ellers '0'.
+
+\subsection{Matrix for Relation S og dens transitive lukning}
+For relation \( S \) og dens transitive lukning, har vi:
+\[
+\text{Original S:}
+\begin{pmatrix}
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+\end{pmatrix}
+\quad
+\text{Transitiv lukning af S:}
+\begin{pmatrix}
+0 & 1 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
+0 & 0 & 0 & 0 \\
+0 & 1 & 1 & 1 \\
+\end{pmatrix}
+\]
+Den transitive lukning inkluderer de originale par samt de par der fuldender transitiviteten.
+
+\subsection{Matrix for Ækvivalensrelation T}
+Da \( T \) er en ækvivalensrelation, vil dens matrix være symmetrisk om diagonalen og have '1'-ere på diagonalen:
+\[
+\begin{pmatrix}
+1 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1 \\
+1 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1 \\
+\end{pmatrix}
+\]
+Ækvivalensklasserne \{1, 3\} og \{2, 4\} fremgår klart af de '1'-ere, som ikke er på diagonalen.
+
+Disse matricer hjælper med at visualisere egenskaberne af de binære relationer og kan bruges til at afsløre yderligere egenskaber og relationer mellem elementerne i de givne sæt.
+
+
+\end{document}
