@@ -164,5 +164,83 @@ Da \( T \) er en ækvivalensrelation, vil dens matrix være symmetrisk om diagon
 
 Disse matricer hjælper med at visualisere egenskaberne af de binære relationer og kan bruges til at afsløre yderligere egenskaber og relationer mellem elementerne i de givne sæt.
 
+\section{Reeksamen 13. Januar 2012 opgave 1}
+\subsection{Opgave}
+Betragt funktionerne f∶ R → R og g∶ R → R defineret ved
+
+\vspace{0.25in}
+ 
+\begin{math}f(x) = x^2 + x + 1 \end{math} og
+\begin{math}g(x) = 2x - 2 \end{math}
+
+\begin{enumerate}[label=\alph*)] % This will label the top-level items as a), b), etc.
+\item[a)] Er f en bijektion?
+\item[b)] Har f en invers funktion? 
+\item[c)] Angiv f + g. 
+\item[d)] Angiv g∘f.
+\end{enumerate}
+
+
+
+\subsection{Løsning}
+\subsubsection{Løsning til a)}
+
+\text For at f kan være en bijektion, skal den både være surjektivt og injektivt. 
+\text Det vil sige at, at vi antager at.
+f(x1)=f(x2)
+
+\begin{math} x_1^2 + x_1+ 1 =x_2^2 + x_2+ 1 \end{math}
+
+\text{Nu skal man trække 1 en fra begge sidder }
+
+
+\begin{math} x_1^2 + x_1 =x_2^2 + x_2 fhr\end{math}
+
+\text{Så trækker man \begin{math}x^2\end{math}  fra begge sidder} 
+
+
+\begin{math} x_1=x_2\end{math}
+
+\text{Nu har vi vist at funktionen f er injektivt, der funktionen er en til en.  }
+
+Nu tjekker vi om f er surjektivt, for at funktionen kan være surjektivt, skal x værdien mindst have en korresponderende y værdi. Dette tjekkes ved at kigge på funktionens graf. Der f er en andengradsligning kan vi se på dens graf, at det er et polynomium. Det vil sige at, grafen er positiv, der og grenene vender opad. Vi kan nu kigge på diskriminanten for at regne, dens minimum ekstremum ud. Vi bruger følgende formel \begin{math} d=b^2-4ac\end{math}
+
+\begin{math}d=1^2-4·1·1=-3\end{math}
+
+Vi kan nu se at diskriminanten er et negativt tal -3, dette vil medføre til, at f ikke skærer x. aksen og dermed kan den ikke have negative værdier. Det vil sige, at y ikke kan være mindre end 1, og der vil derfor ikke være nogen x værdier som kan opnå dette. Vi kan nu konkludere at funktion ikke er surjektiv, der den ikke kan få negative værdier, men kun positive. Det betyder at den ikke dækker, både negative og positive tal. Så kan funktion ikke have en y værdi som mindst har en tilhørende x værdi. 
+
+\subsubsection{Løsning til b)}
+
+Den inverse funktion til f, skrives med udtrykket \begin{math} f^-1 \end{math}, som betyder det omvendte, der f ikke er bijektivt, så har den ikke en invers funktion. 
+
+
+
+
+\subsubsection{Løsning til c)}
+Angiv \begin{math}f + g \end{math}
+
+\begin{math} f+g=(x^2 + x + 1) +(2x - 2) \end{math}
+
+\text{Så reducer man bare.}
+
+\begin{math} f+g=x^2+3x-1 \end{math}
+
+\subsubsection{Løsning til d)}
+
+Angiv\begin{document} \( g \circ f \)  
+
+
+\text{g er den ydre funktion og f er den indre. Det vil sige at vi sætter f(x) ind på x's plads i g(x)}
+
+
+\begin{math} g(f(x))=2(x^2+x+1)-2 \end{math}
+
+\text{Nu ganger man 2 ind i parentesen. }
+ 
+\begin{math}g(f(x))=2x^2+2x+2-2\end{math}
+
+\text{2 går ud med 2, hvor så vi har følgende udtryk tilbage:}
+
+\begin{math}g(f(x))=2x^2+2x\end{math}
 
 \end{document}
