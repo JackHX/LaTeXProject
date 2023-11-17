@@ -185,23 +185,31 @@ Betragt funktionerne f∶ R → R og g∶ R → R defineret ved
 \subsection{Løsning}
 \subsubsection{Løsning til a)}
 
-\text For at f kan være en bijektion, skal den både være surjektivt og injektivt. 
-\text Det vil sige at, at vi antager at.
-f(x1)=f(x2)
+For at bevise at funktionen \( f \) er injektiv, antager vi at \( f(x_1) = f(x_2) \) for to vilkårlige \( x_1 \) og \( x_2 \) i definitionsmængden.
 
-\begin{math} x_1^2 + x_1+ 1 =x_2^2 + x_2+ 1 \end{math}
+\[ x_1^2 + x_1 + 1 = x_2^2 + x_2 + 1 \]
 
-\text{Nu skal man trække 1 en fra begge sidder }
+Subtraher \( 1 \) fra begge sider:
 
+\[ x_1^2 + x_1 = x_2^2 + x_2 \]
 
-\begin{math} x_1^2 + x_1 =x_2^2 + x_2 fhr\end{math}
+Subtraher \( x_2^2 + x_2 \) fra begge sider for at isolere \( x_1^2 - x_2^2 \) på den ene side og \( x_1 - x_2 \) på den anden:
 
-\text{Så trækker man \begin{math}x^2\end{math}  fra begge sidder} 
+\[ x_1^2 - x_2^2 + x_1 - x_2 = 0 \]
 
+Faktorisér venstre side ved at anvende forskellen på to kvadrater og faktorisering:
 
-\begin{math} x_1=x_2\end{math}
+\[ (x_1 - x_2)(x_1 + x_2) + (x_1 - x_2) = 0 \]
 
-\text{Nu har vi vist at funktionen f er injektivt, der funktionen er en til en.  }
+Træk \( x_1 - x_2 \) ud som en fælles faktor:
+
+\[ (x_1 - x_2)(x_1 + x_2 + 1) = 0 \]
+
+For at produktet skal være nul, skal mindst en af faktorerne være nul. Da \( x_1 + x_2 + 1 \) ikke kan være nul for alle reelle tal \( x_1 \) og \( x_2 \) (da det altid vil være større end 1), må vi have at \( x_1 - x_2 = 0 \), hvilket giver:
+
+\[ x_1 = x_2 \]
+
+Dermed er det bevist at \( f \) er injektiv.
 
 Nu tjekker vi om f er surjektivt, for at funktionen kan være surjektivt, skal x værdien mindst have en korresponderende y værdi. Dette tjekkes ved at kigge på funktionens graf. Der f er en andengradsligning kan vi se på dens graf, at det er et polynomium. Det vil sige at, grafen er positiv, der og grenene vender opad. Vi kan nu kigge på diskriminanten for at regne, dens minimum ekstremum ud. Vi bruger følgende formel \begin{math} d=b^2-4ac\end{math}
 
